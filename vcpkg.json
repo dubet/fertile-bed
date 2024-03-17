@@ -1,0 +1,11 @@
+{
+	"$schema": "https://raw.githubusercontent.com/microsoft/vcpkg-tool/main/docs/vcpkg.schema.json",
+	"builtin-baseline": "7f9f0e44db287e8e67c0e888141bfa200ab45121",
+	"name": "sample",
+	"version": "0.1.0",
+	"dependencies": [
+		{ "name": "gtest", "version>=": "1.14.0" },
+		{ "name": "fmt", "version>=": "10.2.1" },
+		{ "name": "spdlog", "version>=": "1.13.0" }
+	]
+}

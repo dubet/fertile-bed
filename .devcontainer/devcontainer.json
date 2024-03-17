@@ -1,0 +1,15 @@
+{
+	"image": "fedora:41",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"llvm-vs-code-extensions.vscode-clangd",
+				"ms-vscode.cmake-tools"
+			]
+		}
+	},
+	"mounts": [
+		"type=bind,source=${localEnv:HOME}/.ssh,target=/root/.ssh,readonly"
+	],
+	"postStartCommand": "/bin/bash -c .devcontainer/post-start.sh"
+}

@@ -1,0 +1,31 @@
+{
+	"version": 3,
+	"cmakeMinimumRequired": {
+		"major": 3,
+		"minor": 21,
+		"patch": 0
+	},
+	"configurePresets": [
+		{
+			"name": "base",
+			"hidden": true,
+			"binaryDir": "${sourceDir}/build",
+			"generator": "Ninja",
+			"toolchainFile": "vcpkg/scripts/buildsystems/vcpkg.cmake"
+		},
+		{
+			"name": "dbg",
+			"inherits": "base",
+			"cacheVariables": {
+				"CMAKE_BUILD_TYPE": "Debug"
+			}
+		},
+		{
+			"name": "rls",
+			"inherits": "base",
+			"cacheVariables": {
+				"CMAKE_BUILD_TYPE": "Release"
+			}
+		}
+	]
+}
